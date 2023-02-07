@@ -33,10 +33,7 @@ const Layout = ({ children }) => {
           padding: `var(--size-gutter)`,
         }}
       >
-        <main>
-          {children}
-          <Script id="userled">{`window.userledSettings={app_id:"360e1a78-2fb5-497b-81b6-5dc7f71b88f6"},function(){var e=window.Userled;if(window.userledSettings,"function"==typeof e)e("reattach_activator"),e("update",window.userledSettings);else{(e=function(){e.call(arguments)}).queue=[],e.call=function(t){e.queue.push(t)},window.Userled=e;var t=function(){console.log("loading script");var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://api.userled.io/static/sdk.bundle.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)};"complete"===document.readyState?t():window.attachEvent?window.attachEvent("onload",t):window.addEventListener("load",t,!1)}}()`}</Script>
-        </main>
+        <main>{children}</main>
         <footer
           style={{
             marginTop: `var(--space-5)`,
