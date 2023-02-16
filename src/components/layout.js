@@ -10,8 +10,13 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import { Userled } from "../userled"
 
 const Layout = ({ children }) => {
+  React.useEffect(() => {
+    Userled.page();
+  }, []);
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
