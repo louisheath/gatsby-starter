@@ -24,10 +24,10 @@ export default function HTML(props) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.userledSettings={app_id:"360e1a78-2fb5-497b-81b6-5dc7f71b88f6"};
-              (function(){
-                if(!window.Userled){window.Userled=function(){e.call(arguments)};var e=window.Userled;e.call=function(t){e.queue.push(t)},e.queue=[],e.snippetVersion="1.0.0";var t=function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://api.userled.io/static/sdk.bundle.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)};"complete"===document.readyState?t():window.attachEvent?window.attachEvent("onload",t):window.addEventListener("load",t,!1);
-              }})();
+              window.userledSettings={app_id:"360e1a78-2fb5-497b-81b6-5dc7f71b88f6"},
+              function(){
+                if(!window.Userled){window.Userled=function(){return a.call(arguments)};var a=window.Userled;a.call=function(b){return new Promise(function(c,d){a.queue.push([].concat.apply([c,d],b))})},a.queue=[],a.snippetVersion="2.0.1";var b=function(){var a=document.createElement("script");a.type="text/javascript",a.src="https://api.userled.io/static/sdk.bundle.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)};b()
+              }}();
             `,
           }}
         />

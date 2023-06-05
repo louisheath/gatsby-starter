@@ -13,7 +13,7 @@ import "./layout.css"
 import { Userled } from "../userled"
 
 const Layout = ({ children }) => {
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     Userled.page();
   }, []);
 
